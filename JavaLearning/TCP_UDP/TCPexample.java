@@ -1,4 +1,4 @@
-package com.javalearning.datastruct;
+ï»¿package com.javalearning.datastruct;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,13 +14,13 @@ import java.net.UnknownHostException;
 class TcpClient1{
 	public static void main(String[] args) throws UnknownHostException, IOException{
 		Socket client = new Socket("127.0.0.1", 10001);
-		//¶¨Òå¶ÁÈ¡¼üÅÌÊı¾İµÄÊı¾İµÄÁ÷¶ÔÏó
+		//å®šä¹‰è¯»å–é”®ç›˜æ•°æ®çš„æ•°æ®çš„æµå¯¹è±¡
 		BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
-		//¶¨ÒåÄ¿µÄ£¬½«Êı¾İĞ´Èëµ½socketÊä³öÁ÷£¬·¢¸ø·şÎñ¶Ë
+		//å®šä¹‰ç›®çš„ï¼Œå°†æ•°æ®å†™å…¥åˆ°socketè¾“å‡ºæµï¼Œå‘ç»™æœåŠ¡ç«¯
 		//BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 		PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(client.getOutputStream()),true);
 		//InputStream in = client.getInputStream();
-		//¶¨ÒåÒ»¸ösocket¶ÁÈ¡Á÷£¬¶ÁÈ¡·şÎñ¶Ë·µ»Ø´óĞ´ĞÅÏ¢
+		//å®šä¹‰ä¸€ä¸ªsocketè¯»å–æµï¼Œè¯»å–æœåŠ¡ç«¯è¿”å›å¤§å†™ä¿¡æ¯
 		BufferedReader bufIn = new BufferedReader(new InputStreamReader(client.getInputStream()));
 		
 		String line = null;
@@ -47,10 +47,10 @@ class TcpServer1{
 		
 		Socket s = server.accept();
 		
-		//¶ÁÈ¡socket¶ÁÈ¡Á÷ÖĞÊı¾İ
+		//è¯»å–socketè¯»å–æµä¸­æ•°æ®
 		BufferedReader bufIn = new BufferedReader(new InputStreamReader(s.getInputStream()));
 		
-		//Ä¿µÄ£¬socketÊä³öÁ÷£¬½«´óĞ´Êı¾İĞ´Èëµ½socketÊä³öÁ÷£¬²¢·¢ËÍ¸ø¿Í»§¶Ë
+		//ç›®çš„ï¼Œsocketè¾“å‡ºæµï¼Œå°†å¤§å†™æ•°æ®å†™å…¥åˆ°socketè¾“å‡ºæµï¼Œå¹¶å‘é€ç»™å®¢æˆ·ç«¯
 		BufferedWriter bufout = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
 		
 		String line = null;

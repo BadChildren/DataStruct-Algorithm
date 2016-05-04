@@ -1,4 +1,4 @@
-package com.javalearning.datastruct;
+锘縫ackage com.javalearning.datastruct;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -40,7 +40,7 @@ class Server{
 			
 			String ip = dp.getAddress().getHostAddress();
 			String data = new String(dp.getData(),0,dp.getLength());
-			System.out.println("从ip="+ip+"获得过来的数据："+data);
+			System.out.println("浠巌p="+ip+"鑾峰緱杩囨潵鐨勬暟鎹細"+data);
 		}
 	}
 }

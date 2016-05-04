@@ -1,4 +1,4 @@
-package com.javalearning.datastruct;
+锘縫ackage com.javalearning.datastruct;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,7 +16,7 @@ class PicClientBy{
 		
 		OutputStream out= client.getOutputStream();
 		
-		FileInputStream in = new FileInputStream("C:\\Users\\Dandy\\Desktop\\最近\\简历\\xudandan.JPG");
+		FileInputStream in = new FileInputStream("C:\\Users\\Dandy\\Desktop\\鏈�杩慭\绠�鍘哱\xudandan.JPG");
 		
 		int len = 0;
 		byte[] buf = new byte[1024];
@@ -25,7 +25,7 @@ class PicClientBy{
 			out.write(buf, 0, len);
 			//System.out.println(len);
 		}
-		//告诉客户端数据已写完
+		//鍛婅瘔瀹㈡埛绔暟鎹凡鍐欏畬
 		client.shutdownOutput();
 		
 		InputStream ins = client.getInputStream();
@@ -62,7 +62,7 @@ class PicServerThread implements Runnable{
 			}
 			OutputStream out = client.getOutputStream();
 			
-			out.write("上传成功".getBytes());
+			out.write("涓婁紶鎴愬姛".getBytes());
 			
 			fos.close();
 			client.close();

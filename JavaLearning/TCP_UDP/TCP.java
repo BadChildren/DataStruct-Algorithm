@@ -1,4 +1,4 @@
-package com.javalearning.datastruct;
+ï»¿package com.javalearning.datastruct;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -10,10 +10,10 @@ import java.net.Socket;
 class TCPServer{
     public static void main(String[] args)throws IOException{
         ServerSocket listen = new ServerSocket(5050);
-        //·şÎñ¶ËÃ»ÓĞÁ÷¶ÔÏó£¬Ö»ÓĞÄÃ¿Í»§¶ËµÄÁ÷¶ÔÏó²ÅÄÜ½øĞĞÍ¨ĞÅ
+        //æœåŠ¡ç«¯æ²¡æœ‰æµå¯¹è±¡ï¼Œåªæœ‰æ‹¿å®¢æˆ·ç«¯çš„æµå¯¹è±¡æ‰èƒ½è¿›è¡Œé€šä¿¡
         Socket server  = listen.accept();
         
-        InputStream in = server.getInputStream();//Ô´ÊÇÍøÂçÁ÷
+        InputStream in = server.getInputStream();//æºæ˜¯ç½‘ç»œæµ
         OutputStream out = server.getOutputStream();
         String ip = server.getInetAddress().getHostAddress();
         byte[] buf = new byte[1024];
@@ -21,7 +21,7 @@ class TCPServer{
         
 //        //char c = (char)in.read();
 //        String c = new String(buf,0, in.read(buf));
-//        System.out.println("ÊÕµ½:" + c);
+//        System.out.println("æ”¶åˆ°:" + c);
         out.write("server".getBytes());
         
         out.close();
@@ -38,10 +38,10 @@ class TCPClient{
         OutputStream out = client.getOutputStream();
         
         out.write("TcP GEN MEN LAILE ".getBytes());
-        //char c = (char)in.read();//sockerµÄread·½·¨Ò²ÊÇ×èÈûÊ½
+        //char c = (char)in.read();//sockerçš„readæ–¹æ³•ä¹Ÿæ˜¯é˜»å¡å¼
         byte[] buf = new byte[1024];
         String c = new String(buf,0,in.read(buf));
-        System.out.println("ÊÕµ½:" + c);
+        System.out.println("æ”¶åˆ°:" + c);
         out.close();
         in.close();
         client.close();
